@@ -141,7 +141,7 @@ Securing Jenkins is crucial to protect your **CI/CD pipeline, stored credentials
 
 Implementing **Role-Based Access Control (RBAC) in Jenkins using the Matrix Authorization Strategy** allows **granular permission control**, ensuring users have only the **necessary access**. Here's how you can configure it:
 
-###### ✅ **Step 1: Install Matrix Authorization Strategy Plugin**
+######  ** 1: Install Matrix Authorization Strategy Plugin**
 1️⃣ Navigate to **Manage Jenkins → Plugin Manager**.  
 2️⃣ Search for **“Matrix Authorization Strategy”** plugin.  
 3️⃣ Install and restart Jenkins.
@@ -150,14 +150,14 @@ Implementing **Role-Based Access Control (RBAC) in Jenkins using the Matrix Auth
 
 ---
 
-###### 🔒 **Step 2: Enable Role-Based Access Control**
+######  ** 2: Enable Role-Based Access Control**
 1️⃣ Go to **Manage Jenkins → Configure Global Security**.  
 2️⃣ Under **Authorization**, select **“Matrix-based security”**.  
 3️⃣ Add users or groups and assign appropriate permissions.
 
 ---
 
-###### **Step 3: Define User Roles & Permissions**
+###### ** 3: Define User Roles & Permissions**
 ✔ Assign **Admins** full control (`Overall Administer`).  
 ✔ Limit **Developers** to manage builds (`Job Configure & Build`).  
 ✔ Restrict access to sensitive areas for **Read-Only users** (`Overall Read`).  
@@ -172,7 +172,7 @@ Example **RBAC Permission Table**:
 ![](./img/c4.png)
 ---
 
-###### **Step 4: Apply & Test Security Settings**
+###### ** 4: Apply & Test Security Settings**
 ✔ Save changes.  
 ✔ Have users **log in and confirm** proper role enforcement.  
 ✔ Review **Jenkins logs** for security violations.
@@ -476,16 +476,16 @@ helm list
 
 
 
-## Customize Helm Chart
+### Customize Helm Chart
 
 Helm charts, values, and templates are the core components of Helm, a Kubernetes package manager. 
 
 ---
 
-#### **1. Helm Charts**
+##### **1. Helm Charts**
 A Helm chart is a collection of files that define Kubernetes resources for deploying an application. It simplifies the deployment process by bundling all necessary configurations into a reusable package.
 
-#### **Structure of a Helm Chart**
+##### **Structure of a Helm Chart**
 - **Chart.yaml**: Contains metadata about the chart, such as its name, version, and description.
 - **values.yaml**: Defines default configuration values for the chart.
 - **templates/**: Contains template files that generate Kubernetes manifests based on the values provided.
@@ -496,10 +496,10 @@ Charts can be used to deploy simple applications (e.g., a single pod) or complex
 
 ---
 
-#### **2. Values**
+##### **2. Values**
 The `values.yaml` file is used to define default configuration values for a Helm chart. These values can be overridden during deployment to customize the application for different environments (e.g., development, staging, production).
 
-#### **How Values Work**
+##### **How Values Work**
 - **Default Values**: Specified in `values.yaml`.
 - **Override Values**: You can override defaults using a custom values file or command-line flags:
   ```bash
@@ -509,7 +509,7 @@ The `values.yaml` file is used to define default configuration values for a Helm
 
 ---
 
-#### **3. Templates**
+##### **3. Templates**
 Templates are files in the `templates/` directory that use Go's templating language to generate Kubernetes manifests. They allow you to create dynamic configurations based on the values provided.
 
 ##### **How Templates Work**
@@ -701,7 +701,9 @@ ls
     git push
     ```
 
-# Deploying Your Application
+  ![](./img/c27.png)
+
+## Deploying Your Application
 
 1. **Deploy With Helm** : Navigate to the root of the project directory `helm-webApp`
 
@@ -1101,10 +1103,10 @@ This resolution allowed Jenkins to securely interact with your Kubernetes cluste
 ---
 
 
-#TEST:webhook Test
+#TEST:webhook Test Result.
 
-![](./img/e16.png)
-![](./img/e17.png)
+![](./img/c25.png)
+![](./img/c26.png)
 
 
 ## TESTING
